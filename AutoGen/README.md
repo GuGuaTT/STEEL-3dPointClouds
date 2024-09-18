@@ -30,5 +30,4 @@ For more info about the entire database structure, as well as detailed usage not
 
 [(Hartloper et al. 2022)]: https://ascelibrary.org/doi/full/10.1061/%28ASCE%29ST.1943-541X.0003211
 [(Hartloper et al. 2021)]: https://ascelibrary.org/doi/full/10.1061/(ASCE)ST.1943-541X.0002964
-
-[HDF5 format]: https://www.h5py.org/
+[(HDF5 format)]: https://www.h5py.org/
