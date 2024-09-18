@@ -3,7 +3,7 @@ This repository contains scripts for feature engineering of the Steel-3DPointClo
 
 ## Data storage structure
 
-This database records information including point clouds, stress and strain fields and macroscopic behaviors, of I-shape hot-rolled steel columns under monotonic/cyclic obtained from numerical analyses with Multiple-Point Constraint (MPC) models [(Hartloper et al. 2022)]. The data is stored in [HDF5 format], which has the following structure,
+This database records information including point clouds, stress and strain fields and macroscopic behaviors, of I-shape hot-rolled steel columns under monotonic/cyclic obtained from numerical analyses with Multiple-Point Constraint (MPC) models [(Hartloper et al. 2022)]. The data is stored in [HDF5 format](https://www.h5py.org/), which has the following structure,
 
 <p align="center">
     <img src="FIG2/struct.jpg" alt="img1" width="600">
