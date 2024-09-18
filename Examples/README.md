@@ -1,4 +1,4 @@
-# Steel-3dPointCloud Database: Examples of potential usage
+# Steel-3dPointCloud Database: examples of potential usage
 This repository offers exemplar scripts demonstrating the potential applications of the Steel-3DPointCloud database across various fields. Please refer to ## link to the data paper ## for more detailed background information.
 
 ## Example 1
