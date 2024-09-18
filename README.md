@@ -28,4 +28,4 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ## Citation
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tianyu Gu, Nenad Bijelić, Isinsu Katircioglu, Guillaume Obozinski and Dimitrios G. Lignos. (2024) "STEEL-3dPointClouds: 3D-point cloud database for supporting automated quantification of residual life and reusability of steel beam-columns." Under review.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tianyu Gu, Nenad Bijelić, Isinsu Katircioglu, Guillaume Obozinski and Dimitrios G. Lignos. (2024) STEEL-3dPointClouds: 3D-point cloud database for supporting automated quantification of residual life and reusability of steel beam-columns. Under review.
