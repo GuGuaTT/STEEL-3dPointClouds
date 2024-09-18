@@ -95,7 +95,7 @@ Detailed explanations of all the data recorded are listed below,
 |**indices**                 |Dataset     |selected indices                    |       (nsf, )        |
 |**top_RM1**              |Dataset     |top reaction moment around x-axis (N·mm)                  |       (nf, )        |
 |**bot_RM1**              |Dataset     |bottom reaction moment around x-axis (N·mm)           |       (nf, )        |
-|**reserve_capacity**     |Dataset     |reserve bearing capacities  (N·mm)                   |       (nf, nrc)       |
+|**reserve_capacity**     |Dataset     |reserve bearing capacities                   |       (nf, nrc)       |
 |**top_U2**               |Dataset     |top transverse displacement at y-direction (mm)                  |        (nf, )       |
 |**top_U3**               |Dataset     |top axial displacement at z-direction (mm)              |      (nf, )         |
 |**top_R1**               |Dataset     |top rotation around x-axis (rad)                   |       (nf, )        |
