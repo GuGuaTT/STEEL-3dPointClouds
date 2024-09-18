@@ -33,12 +33,12 @@ Accessing the HDF5 format database is easy by following the basic rule,
 
 > Groups work like dictionaries, and datasets work like NumPy arrays.
 
-For instance, if the user wants the data of a W21X101 section column with a length of 3500 mm, under an axial load to yield strength ratio of 0.2, with symmetric loading protocol and flexible boundary condition on the top end, the following code should be used,
+For instance, if the user wants the data of a W21X101 section column with a length of 5000 mm, under an axial load to yield strength ratio of 0.2, with symmetric loading protocol and flexible boundary condition on the top end, the following code should be used,
 
 ```python
 import h5py
 column_database = h5py.File("column.hdf5", "r")
-column_data = column_database['W21X101']['3500']['Symmetric']['0.2']['Flexible']
+column_data = column_database['W21X101']['5000']['Symmetric']['0.2']['Flexible']
 ```
 
 One can check the keys under the current group by,
