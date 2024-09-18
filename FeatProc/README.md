@@ -9,11 +9,11 @@ This database records information including point clouds, stress and strain fiel
     <img src="FIG2/struct.jpg" alt="img1" width="600">
 </p>
 
-Note that in the above figure, all the data colored IN black are raw data generated directly from `AutoGen`, and the rest colored in red are obtained by `FeatProc` through further feature processing.
+Note that in the above figure, all the data colored in black are raw data generated directly from `AutoGen`, and the rest colored in red are obtained by `FeatProc` through further feature processing.
 
 ## Metadata
 
-Generally, a numerical model of column in the database can be located with five parameters, including (1) member section, (2) member length, (3) loading protocol, (4) axial load to yield strength ratio, (5) boundary, and accordingly there are five metadata groups in the database,
+Generally, a numerical model of column in the database can be located with five metadata parameters, including (1) member section, (2) member length, (3) loading protocol, (4) axial load to yield strength ratio, (5) boundary, and accordingly there are five metadata groups in the database,
 
 - **Section Group:** In this database, ASTM steel wide channel I-beam sections are considered.
   
