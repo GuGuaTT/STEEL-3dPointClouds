@@ -6,7 +6,7 @@ This repository provides scripts for point cloud feature engineering of the Stee
 This database records information including point clouds, stress and strain fields and macroscopic behaviors, of I-shape hot-rolled steel columns under monotonic/cyclic obtained from numerical analyses with Multiple-Point Constraint (MPC) models [(Hartloper et al. 2022)]. The data is stored in [HDF5 format], which has the following structure,
 
 <p align="center">
-    <img src="FIG2/struct.JPG" alt="img1" width="600">
+    <img src="FIG2/struct.jpg" alt="img1" width="600">
 </p>
 
 Note that in the above figure, all the data colored black are generated directly from `AutoGen`, and the rest data colored in red are obtained by `FeatProc` through further feature processing.
@@ -175,7 +175,9 @@ The indexing process of nodes and elements in a specified solid element segment 
 
 In addition, it should be noted that the labels of eight integration points in each element always follow the indexing rule shown in the figure below, depending on their relative position in the global coordinate system.
 
-<img src="D://codes//HDF5//Pics//integration_point.jpg" alt="img1" width="300">
+<p align="center">
+    <img src="FIG2/integration_point.jpg" alt="img1" width="300">
+</p>
 
 By this indexing method, each node can be found easily with mesh attributes.  For example, if the user wants to print the initial x-coordinate of the green centerline node in the aforementioned figure, it is convenient to obtain it after knowing mesh attributes **n_w**, **n_k**, **n_tw** and **n_l**,
 
