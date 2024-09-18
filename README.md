@@ -18,7 +18,7 @@ Code written and maintained by Tianyu Gu ([tianyu.gu@epfl.ch](mailto:tianyu.gu@e
 
 ## Acknowledgments
 
-- Prof. Dimitrios G. Lignos and Dr. Nenad Bijelić from EPFL, and Dr. Isinsu Katircioglu and Dr. Guillaume Obozinski from SDSC for their guidance and assistance.
+- Prof. Dimitrios G. Lignos and Dr. Nenad Bijelić from RESSLab, EPFL, and Dr. Isinsu Katircioglu and Dr. Guillaume Obozinski from Swiss Data Science Center (SDSC) for their guidance and assistance.
 
 - Scientific IT and Application Support Center (SCITAS) team for their help with high-performance computing.
 
