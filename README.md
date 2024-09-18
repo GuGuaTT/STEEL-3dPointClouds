@@ -6,7 +6,7 @@ This is the repository for the [Steel-3dPointClouds Database](https://github.com
 
 This repository includes three main directories: 
 
-- `AutoGen` contains scripts used for generating the Steel-3DPointClouds Database.
+- `AutoGen` contains scripts used for generating the raw Steel-3DPointClouds Database.
 - `FeatProc` houses the primary post-processing scripts.
 - `Examples` provides three use cases showcasing the potential applications of the database.
 
