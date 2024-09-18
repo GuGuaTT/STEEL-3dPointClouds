@@ -63,7 +63,7 @@ time = column_data['time']
 ele_strain = column_data['Solid_element']['ele_strain']
 ```
 
-It is meaningless to save all the data from all the increment steps after numerical simulation, as shown in the base moment - drift curve below, a lot of increment steps are very close and their results can be similar, so it is a waste of storage to save all the data. In this database, only point cloud data (coordinate, strain, stress) of the most representative increment steps is selected and saved, and the selected data's indices in the original indice sequence are saved in the vector **indices**. On the other hand, to keep the smoothness of macro-response of member, such as simulation time, moment and displacement vectors still keep all the data from all increment steps.
+It is meaningless to save all the data from all the increment steps after numerical simulation, as shown in the base moment - drift curve below, a lot of increment steps are very close and their results can be similar, so it is a waste of storage to save all the data. In this database, only point cloud data (coordinate, strain, and stress) of the most representative increment steps is selected and saved, and the selected data's indices in the original index sequence are saved in the vector **indices**. On the other hand, to keep the smoothness of macro-response of member, such as simulation time, moment and displacement vectors still keep all the data from all increment steps.
 
 <p align="center">
   <img src="FIG2/increment_selection.jpg" alt="img1" width="800">
