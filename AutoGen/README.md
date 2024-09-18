@@ -10,7 +10,9 @@ Four main scripts are executed in this directory to generate the Steel-3DPointCl
 - `inp_analysis.py`: This script conducts numerical simulation in an sequential manner towards all the final ABAQUS input files. In this process, subroutine `ALLcombinedSolid_CMN.for`/`ALLcombinedSolid_DMN.for` is used to define steel UVC material model [(Hartloper et al. 2021)] and MPC coupling. Check [GitHub - ahartloper/UVC_MatMod: Updated Voce-Chaboche (UVC) Material Model for Structural Steels](https://github.com/ahartloper/UVC_MatMod) for more info. After each simulation, all the useful information are extracted from ABAQUS output files and recorded in the form of pickle files.
 - `save_HDF5.py`: This script aggregates all saved pickle files to a HDF5[(HDF5 format)] database.
 
-<img src="FIG1/flow.jpg" alt="img0" width="400">
+<p align="center">
+  <img src="FIG1/flow.jpg" alt="img0" width="400">
+</p>
 
 ## Usage notes
 
