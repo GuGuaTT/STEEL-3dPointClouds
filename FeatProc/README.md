@@ -9,7 +9,7 @@ This database records information including point clouds, stress and strain fiel
     <img src="FIG2/struct.jpg" alt="img1" width="600">
 </p>
 
-Note that in the above figure, all the data colored black are generated directly from `AutoGen`, and the rest data colored in red are obtained by `FeatProc` through further feature processing.
+Note that in the above figure, all the data colored IN black are raw data generated directly from `AutoGen`, and the rest colored in red are obtained by `FeatProc` through further feature processing.
 
 ## Metadata
 
