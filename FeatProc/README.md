@@ -106,8 +106,8 @@ Detailed explanations of all the data recorded are listed below,
 |**ele_strain**           |Dataset     |six plastic strain components on integration points                    |       (nsf, ne, ns, ni, npe)        |
 |**beam_node_coord**      |Dataset     |three-dimensional coordinates of nodes on beam element segment (mm)    |      (nsf, nb, nc)         |
 |**beam_node_rotation**   |Dataset     |three-dimensional rotations of nodes on beam element segment (rad)  |        (nsf, nb, nr)       |
-|**processed_center**   |Dataset     |processed centerline point cloud  | (nsf, ne, np, nc)  |
-|**relative_displacaement**   |Dataset     |relative displacement point cloud  |      (nsf, ne, np, nc)      |
+|**processed_center**   |Dataset     |processed centerline point cloud (mm)  | (nsf, ne, np, nc)  |
+|**relative_displacaement**   |Dataset     |relative displacement point cloud (mm)  |      (nsf, ne, np, nc)      |
 |**mnorm**   |Dataset     |multi-factor normalization factors  |         (nc, )         |
 |**snorm**   |Dataset     |unit-sphere normalization factors  | (nsf, ne, nc)  |
 |**bnorm**   |Dataset     |plate buckling theory normalization factor  |       scalar       |
