@@ -76,6 +76,8 @@ indices = column_data['indices']
 current_bot_RM1 = column_data['Reaction']['bot_RM1'][indices[2]]
 ```
 
+Detailed explanations of all the data recorded are listed below,
+
 |**Datasets**             |**Type**    |**Description**                                                 |**Dimension**  |
 |:---:                    |:---:       |:---:                    |:---:          |
 |**n_tf**                 |Attribute   |number of elements along flange width        |     scalar          |
