@@ -168,20 +168,20 @@ For convenient data extraction, node and element indices in the datasets are arr
   <img src="FIG2/GTY3.jpg" alt="img1" width="900">
 </p>
 
-The indexing process of nodes and elements in a specified solid element segment always starts from the one with the smallest x, y and z global coordinates, then this process continues along z direction first. The labeling in z direction forms a "labelling line", and then,
-- For profile nodes, the labelling line travels around the member clockwise to label all of them.
+The indexing of nodes and elements within a specified solid element segment begins with the one having the smallest x, y, and z global coordinates. The process proceeds along the z-axis first, forming a 'labeling line.' This labeling line behaves as follows:
+- For profile nodes, it moves clockwise around the member to label all nodes.
   
-- For centerline nodes, the labeling line travels along bottom flange first, and then web and finally upper flange in the direction shown in the figure above.
+- For centerline nodes, it starts at the bottom flange, moves along the web, and finishes at the upper flange, as shown in the figure above.
 
-- For solid elements, the labelling line first travels at thickness direction, then travels along the lower flange, web and upper flange step by step in a similar manner.
+- For solid elements, the labeling line first moves through the thickness, then progressively along the lower flange, web, and upper flange in a similar fashion.
 
-In addition, it should be noted that the labels of eight integration points in each element always follow the indexing rule shown in the figure below, depending on their relative position in the global coordinate system.
+In addition, it should be noted that the indices of eight integration points in each element always follow the indexing rule shown in the figure below, depending on their relative position in the global coordinate system.
 
 <p align="center">
     <img src="FIG2/integration_point.jpg" alt="img1" width="300">
 </p>
 
-By this indexing method, each node can be found easily with mesh attributes.  For example, if the user wants to print the initial x-coordinate of the green centerline node in the aforementioned figure, it is convenient to obtain it after knowing mesh attributes **n_w**, **n_k**, **n_tw** and **n_l**,
+By this indexing method, each node can be found easily with mesh attributes.  For example, if the user wants to print the initial x-coordinate of the green centerline node in the above figure, it can be convenient to obtain it after knowing mesh attributes **n_w**, **n_k**, **n_tw** and **n_l**,
 
 ```python
 n_w = column_data.attrs['n_w']
