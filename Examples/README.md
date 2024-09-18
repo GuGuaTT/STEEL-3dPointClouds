@@ -6,7 +6,7 @@ This repository offers exemplar scripts demonstrating the potential applications
 The first application of the database is the potential use of data-driven tools for the automated quantification of reserve capacity of steel columns. This repository provides a baseline model using K-nearest neighbors (KNN). The model that employs only the column bottom end point cloud as input provides the most accurate predictions, demonstrating an overall prediction error of 5.6% for $R_\mathrm{M}^{(+)}$ and 5.3% for $R_\mathrm{M}^{(-)}$ can be achieved for reserve capacities between 40% to 100%, as shown by the figure below.
 
 <p align="center">
-    <img src="D://codes//HDF5//FIG3//17.JPG" alt="img1" width="800">
+    <img src="FIG3/17.JPG" alt="img1" width="800">
 </p>
 
 To reproduce the results, first run `Prep_dataset.py` to extract information from the Steel-3DPointCloud database and save as several numpy files. Next, execute `KNN_1P.py`, `KNN_2P.py`, and `KNN_DR.py` to perform KNN-based reserve capacity quantification. Finally, use `KNN_plot.py` to visualize the results.
@@ -16,7 +16,7 @@ To reproduce the results, first run `Prep_dataset.py` to extract information fro
 The second example illustrates how the database can be used to establish a data-driven surrogate for predicting typical deformation characteristics that are associated with the pre- and post-peak plastic rotation of a steel beam-column [(Lignos and Krawinkler 2011)], as shown by the figure below. The idea is to use various column geometrical and load properties, including $d/t_\mathrm{w}$, $b_\mathrm{f}/t_\mathrm{f}$, $L/d$, $L/r_\mathrm{y}$, $d$ and $P/P_\mathrm{y}$, as input to directly infer the column's plastic rotation parameters, $\theta_\mathrm{p}$, $\theta_\mathrm{pc}$, $\theta^*_\mathrm{p}$ and $\theta^*_\mathrm{pc}$, under monotonic and cyclic loading. Here a baseline ML model is provided using a four-layer fully connected neural network with a per-layer drop out ratio of 0.3. It achieves an overall relative error of 10.8%, 5.3%, 11.0% and 13.5% for $\theta_\mathrm{p}$, $\theta_\mathrm{pc}$, $\theta^*_\mathrm{p}$ and $\theta^*_\mathrm{pc}$, respectively, on the test set.
 
 <p align="center">
-    <img src="D://codes//HDF5//FIG3//18.JPG" alt="img1" width="800">
+    <img src="FIG3/18.JPG" alt="img1" width="800">
 </p>
 
 To reproduce the results, first run `Prep_dataset_S.py`/`Prep_dataset_M.py` to extract information from the Steel-3DPointCloud database and save as several numpy files. Next, execute `main.py` to train the ML model. Finally, use `test.py` to visualize the results.
