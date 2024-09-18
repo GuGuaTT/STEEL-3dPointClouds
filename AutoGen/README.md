@@ -18,7 +18,7 @@ Four main scripts are executed in this directory to generate the Steel-3DPointCl
 
 Among the four main scripts in this directory, `initial_inp_generation.py` and `inp_analysis.py` should be run in ABAQUS kernel command line. Detailed instructions can be found in [ABAQUS Scripting User's Manual (v6.6)](https://classes.engineering.wustl.edu/2009/spring/mase5513/abaqus/docs/v6.6/books/cmd/default.htm?startat=pt02ch04s05.html). The other two scripts should be run directly outside ABAQUS environment.
 
-To run your own tests, please modify the directory paths within each of the four scripts. Adjustments to material properties, loading protocol, column profile, boundary conditions, and axial load ratio should be made in `initial_inp_generation.py`. Changes related to geometric imperfections and residual stresses should be implemented in `functions/structural_components.py`.
+To run your own tests, please modify the directory paths within each of the four scripts. Adjustments to material properties, loading protocol, column profile, boundary conditions, and axial load ratio should be made in `initial_inp_generation.py`. Changes related to geometric imperfections and residual stresses should be implemented in `functions/structural_components.py`. Certrain instructions can be found in each script.
 
 For more info about the entire database structure, as well as detailed usage notes to the database, please refer to the `FeatProc` directory.
 
