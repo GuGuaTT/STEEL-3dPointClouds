@@ -99,8 +99,8 @@ Detailed explanations of all the data recorded are listed below,
 |**top_U2**               |Dataset     |top transverse displacement at y-direction (mm)                  |        (nf, )       |
 |**top_U3**               |Dataset     |top axial displacement at z-direction (mm)              |      (nf, )         |
 |**top_R1**               |Dataset     |top rotation around x-axis (rad)                   |       (nf, )        |
-|**profile_node_coord**         |Dataset     |three-dimensional coordinates of nodes on outside profiles of solid element segment (mm) |(nsf, ne, nsp, nc)|
-|**center_node_coord**          |Dataset     |three-dimensional coordinates of nodes on centerlines of solid element segment (mm)     |(nsf, ne, nsc, nc)|
+|**profile_node_coord**         |Dataset     |3D coordinates of nodes on outside profiles of solid element segment (mm) |(nsf, ne, nsp, nc)|
+|**center_node_coord**          |Dataset     |3D coordinates of nodes on centerlines of solid element segment (mm)     |(nsf, ne, nsc, nc)|
 |**ele_coord**            |Dataset     |coordinates of integration points (mm)                  |       (nsf, ne, ns, ni, nc)        |
 |**ele_stress**           |Dataset     |three principal stress and Mises stress on integration points (MPa)     |          (nsf, ne, ns, ni, nps)     |
 |**ele_strain**           |Dataset     |six plastic strain components on integration points                    |       (nsf, ne, ns, ni, npe)        |
