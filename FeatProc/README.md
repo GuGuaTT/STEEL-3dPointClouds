@@ -109,7 +109,7 @@ Detailed explanations of all the data recorded are listed below,
 |**processed_center**   |Dataset     |processed centerline point cloud (mm)  | (nsf, ne, np, nc)  |
 |**relative_displacaement**   |Dataset     |relative displacement point cloud (mm)  |      (nsf, ne, np, nc)      |
 |**mnorm**   |Dataset     |multi-factor normalization factors  |         (nc, )         |
-|**snorm**   |Dataset     |unit-sphere normalization factors  | (nsf, ne, nc)  |
+|**snorm**   |Dataset     |unit-sphere normalization factors  | (nsf, ne)  |
 |**bnorm**   |Dataset     |plate buckling theory normalization factor  |       scalar       |
 >**Notes:** <br>
 >nf - total number of increment steps;
