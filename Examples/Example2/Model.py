@@ -6,23 +6,23 @@ class Regression(nn.Module):
     def __init__(self):
         super(Regression, self).__init__()
 
-        self.fc1 = nn.Linear(7, 128)
-        self.bn1 = nn.BatchNorm1d(128)
+        self.fc1 = nn.Linear(6, 256)
+        self.bn1 = nn.BatchNorm1d(256)
         self.drop1 = nn.Dropout(0.2)
         
-        self.fc2 = nn.Linear(128, 512)
-        self.bn2 = nn.BatchNorm1d(512)
+        self.fc2 = nn.Linear(256, 1024)
+        self.bn2 = nn.BatchNorm1d(1024)
         self.drop2 = nn.Dropout(0.2)
         
-        self.fc3 = nn.Linear(512, 512)
-        self.bn3 = nn.BatchNorm1d(512)
+        self.fc3 = nn.Linear(1024, 1024)
+        self.bn3 = nn.BatchNorm1d(1024)
         self.drop3 = nn.Dropout(0.2)
         
-        self.fc4 = nn.Linear(512, 128)
-        self.bn4 = nn.BatchNorm1d(128)
+        self.fc4 = nn.Linear(1024, 256)
+        self.bn4 = nn.BatchNorm1d(256)
         self.drop4 = nn.Dropout(0.2)
         
-        self.fc5 = nn.Linear(128, 1)
+        self.fc5 = nn.Linear(256, 1)
 
     def forward(self, x):
         

@@ -22,20 +22,20 @@ def MAPE(y_true, y_pred):
 
 
 class IMKDataset(Dataset):
-    def __init__(self, root, scaler, split='tr'):
+    def __init__(self, root, split='tr'):
         self.inp = np.load(os.path.join(root, split + '_input.npy'))
         self.out = np.load(os.path.join(root, split + '_theta.npy'))
 
-        self.inp = self.inp[(self.out[:, 0] < 0.04) & (self.out[:, 1] < 0.07)]
-        self.out = self.out[(self.out[:, 0] < 0.04) & (self.out[:, 1] < 0.07)]
+        # self.inp = self.inp[(self.out[:, 0] < 0.04) & (self.out[:, 1] < 0.07)]
+        # self.out = self.out[(self.out[:, 0] < 0.04) & (self.out[:, 1] < 0.07)]
 
         if split == 'tr':
             scaler = MinMaxScaler()
             self.inp = scaler.fit_transform(self.inp)
-            joblib.dump(scaler, 'data/scaler_params.pkl')
+            joblib.dump(scaler, os.path.join(root, 'scaler_params.pkl'))
 
         else:
-            scaler = joblib.load('data/scaler_params.pkl')
+            scaler = joblib.load(os.path.join(root, 'scaler_params.pkl'))
             self.inp = scaler.transform(self.inp)
 
     def __len__(self):
@@ -43,16 +43,16 @@ class IMKDataset(Dataset):
 
     def __getitem__(self, idx):
         return torch.from_numpy(self.inp[idx, :6]).float(), \
-               torch.from_numpy(self.out[idx, 1:]).float()
+            torch.from_numpy(self.out[idx, 0:1]).float()
 
 
 def main():
-    data_path = 'data'
-    save_path = 'data'
-    learning_rate, min_lr = 1e-4, 1e-8
+    data_path = 'data_m0'
+    save_path = 'data_m0'
+    learning_rate, min_lr = 1e-4, 1e-9
     decay_rate = 5e-4
-    batch_size = 32
-    num_epochs = 2000
+    batch_size = 128
+    num_epochs = 5000
 
     training_set = IMKDataset(data_path, 'tr')
     training_loader = DataLoader(training_set, batch_size=batch_size, shuffle=True, num_workers=0)
@@ -61,7 +61,6 @@ def main():
 
     model = Regression()
     device = get_device()
-    print(device)
 
     criterion = torch.nn.MSELoss(reduction='sum')
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=decay_rate)
@@ -135,13 +134,14 @@ def main():
         mape_vl = MAPE(out_gt, out_pred)
         validation_loss = running_loss / len(validation_loader)
 
-        print('Epoch {}, Training Loss: {:.6f}, Validation Loss: {:.6f}, Training MAPE: {:.3f}, Validation MAPE: {:.3f}'.format(
-            epoch, training_loss, validation_loss, mape_tr, mape_vl))
+        print(
+            'Epoch {}, Training Loss: {:.6f}, Validation Loss: {:.6f}, Training MAPE: {:.3f}, Validation MAPE: {:.3f}'.format(
+                epoch, training_loss, validation_loss, mape_tr, mape_vl))
 
         if best_error > mape_vl:
             best_error = mape_vl
             print("Model saving...")
-            torch.save(model.state_dict(), os.path.join(save_path, 'best.pth'))
+            torch.save(model.state_dict(), os.path.join(save_path, 'bestAlr.pth'))
 
 
 if __name__ == "__main__":
